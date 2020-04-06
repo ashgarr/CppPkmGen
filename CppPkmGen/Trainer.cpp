@@ -4,7 +4,7 @@
 
 Trainer::Trainer(const char* name) {
 	this->name = name;
-	srand(time(0));
+	srand(time(NULL));
 	trainerID = (unsigned short) (rand() % 65536);
 	secretID = (unsigned short)(rand() % 65536);
 }
