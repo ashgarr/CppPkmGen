@@ -3,16 +3,19 @@
 
 #include <iostream>
 #include <string>
+#include <ctime>
 #include "Trainer.h"
 #include "Pokemon.h"
 
 Trainer trainer;
 int runtime = 0;
 bool gen7;
-int bruh();
+int catchOne();
 
 int main()
 {
+    srand(time(NULL));
+
     // NAME HARVEST
     std::string s_name;
     std::cout << "What is your name?" << std::endl;
@@ -47,7 +50,7 @@ int main()
     int goes = 1000;
 
     for (int i = 0; i < goes; i++) {
-        sum += bruh();
+        sum += catchOne();
     }
 
     int avg = sum / goes;
@@ -56,20 +59,22 @@ int main()
     
 }
 
-int bruh() {
+int catchOne() {
     bool gotShiny = false;
     int catches = 0;
+    Pokemon a = Pokemon(1);
 
     while (!gotShiny) {
-        Pokemon a = Pokemon(1);
         catches++;
         if (a.checkShiny(trainer.getTrainerID(), trainer.getSecretID(), gen7)) {
             gotShiny = true;
+            break;
         }
+        a.regen();
     }
 
     runtime++;
-    printf("%d) You caught a X after %d tries!", runtime, catches);
+    printf("%d) You caught a X after %d tries!\n", runtime, catches);
     return catches;
 }
 

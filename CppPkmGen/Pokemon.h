@@ -14,6 +14,7 @@ private:
     unsigned personalityGen();
 
 public:
+    void regen();
     Pokemon(int id);
     int getHP();
     unsigned getPersonality();
