@@ -6,6 +6,7 @@
 #include <ctime>
 #include "Trainer.h"
 #include "Pokemon.h"
+#include "NumberGenerator.h"
 
 Trainer trainer;
 int runtime = 0;
@@ -14,7 +15,7 @@ int catchOne();
 
 int main()
 {
-    srand(time(NULL));
+    srand(time(0));
 
     // NAME HARVEST
     std::string s_name;
@@ -70,12 +71,24 @@ int catchOne() {
             gotShiny = true;
             break;
         }
+        //printf("%d\n", a.getShinyVal(trainer.getTrainerID(), trainer.getSecretID()));
         a.regen();
     }
 
     runtime++;
     printf("%d) You caught a X after %d tries!\n", runtime, catches);
     return catches;
+}
+
+void rngDebug() {
+    long qSum = 0;
+    NumberGenerator g = NumberGenerator();
+    for (int j = 0; j < 10000; j++) {
+        int t_num = g.u16Gen();
+        std::cout << t_num << std::endl;
+        qSum = qSum + t_num;
+    }
+    std::cout << qSum / 10000 << std::endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

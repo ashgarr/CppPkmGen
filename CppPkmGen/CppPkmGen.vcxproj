@@ -152,10 +152,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CppPkmGen.cpp" />
+    <ClCompile Include="NumberGenerator.cpp" />
     <ClCompile Include="Pokemon.cpp" />
     <ClCompile Include="Trainer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="NumberGenerator.h" />
     <ClInclude Include="Pokemon.h" />
     <ClInclude Include="Trainer.h" />
   </ItemGroup>
