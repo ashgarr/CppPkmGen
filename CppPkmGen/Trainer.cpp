@@ -3,17 +3,14 @@
 
 Trainer::Trainer(const char* name) {
 	this->name = name;
-	NumberGenerator g = NumberGenerator();
-	trainerID = g.u16Gen();
-	secretID = g.u16Gen();
+	trainerID = u16Gen();
+	secretID = u16Gen();
 }
 
 Trainer::Trainer() {
 	const char* test = "o";
-	name = test;
-	NumberGenerator g = NumberGenerator();
-	trainerID = g.u16Gen();
-	secretID = g.u16Gen();
+	trainerID = u16Gen();
+	secretID = u16Gen();
 }
 
 const char* Trainer::getName() {

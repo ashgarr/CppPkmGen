@@ -82,9 +82,8 @@ int catchOne() {
 
 void rngDebug() {
     long qSum = 0;
-    NumberGenerator g = NumberGenerator();
     for (int j = 0; j < 10000; j++) {
-        int t_num = g.u16Gen();
+        int t_num = u16Gen();
         std::cout << t_num << std::endl;
         qSum = qSum + t_num;
     }

@@ -31,8 +31,7 @@ void Pokemon::genIVs() {
 }
 
 unsigned Pokemon::personalityGen() {
-	NumberGenerator g = NumberGenerator();
-	int val = g.u16Gen() << 16 | g.u16Gen();
+	int val = u16Gen() << 16 | u16Gen();
 	return val;
 }
 
