@@ -1,10 +1,6 @@
 #include "Pokemon.h"
-#include <time.h>
-#include <math.h>
 #include <cstdlib>
-#include <ctime>
-#include <chrono>
-#include <iostream>
+#include "NumberGenerator.h"
 
 Pokemon::Pokemon(int id) {
 	this->id = id;
@@ -35,7 +31,8 @@ void Pokemon::genIVs() {
 }
 
 unsigned Pokemon::personalityGen() {
-	int val = rand() << 16 | rand();
+	NumberGenerator g = NumberGenerator();
+	int val = g.u16Gen() << 16 | g.u16Gen();
 	return val;
 }
 

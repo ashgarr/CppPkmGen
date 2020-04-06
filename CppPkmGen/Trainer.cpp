@@ -1,20 +1,19 @@
-#include <cstdlib>
-#include <ctime>
 #include "Trainer.h"
+#include "NumberGenerator.h"
 
 Trainer::Trainer(const char* name) {
 	this->name = name;
-	srand(time(NULL));
-	trainerID = (unsigned short) (rand() % 65536);
-	secretID = (unsigned short)(rand() % 65536);
+	NumberGenerator g = NumberGenerator();
+	trainerID = g.u16Gen();
+	secretID = g.u16Gen();
 }
 
 Trainer::Trainer() {
 	const char* test = "o";
 	name = test;
-	srand(time(0));
-	trainerID = (unsigned short)(rand() % 65536);
-	secretID = (unsigned short)(rand() % 65536);
+	NumberGenerator g = NumberGenerator();
+	trainerID = g.u16Gen();
+	secretID = g.u16Gen();
 }
 
 const char* Trainer::getName() {
