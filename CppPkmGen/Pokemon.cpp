@@ -5,9 +5,6 @@
 #include <ctime>
 #include <chrono>
 #include <iostream>
-#include <boost/random/mersenne_twister.hpp>
-#include <boost/random/uniform_int_distribution.hpp>
-#include <boost/random/uniform_int.hpp>
 
 Pokemon::Pokemon(int id) {
 	this->id = id;
@@ -38,13 +35,6 @@ void Pokemon::genIVs() {
 }
 
 unsigned Pokemon::personalityGen() {
-	
-	//std::time_t now = std::time(0);
-	//boost::random::mt19937 gen{ static_cast<std::uint32_t>(clock()) };
-	//// BOOST GENS SIGNED INTS
-	//boost::random::uniform_int_distribution<> dist(-2147483648, 2147483647);
-	//unsigned val = 2147483648 + dist(gen);
-
 	int val = rand() << 16 | rand();
 	return val;
 }
@@ -53,8 +43,6 @@ bool Pokemon::checkShiny(unsigned short trainerID, unsigned short secretID, bool
 	unsigned short upper = (unsigned short)(personality >> 16);
 	unsigned short lower = (unsigned short)(personality & 0xFFFF);
 	unsigned short val = (unsigned short)(trainerID ^ secretID ^ upper ^ lower);
-	// val = 15;
-	// std::cout << val << std::endl;
 	if (gen7) {
 		return val < 16;
 	}

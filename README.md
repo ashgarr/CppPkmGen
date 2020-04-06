@@ -1,8 +1,6 @@
 
 [PORT OF C# VERSION](https://github.com/FamiKona/CSPkmnGen)
 
-Requires [Boost](https://www.boost.org/)
-
 generates pokemon in the actual way that the games would (as far as I know)
 
 (mostly) accurate to gen 7
