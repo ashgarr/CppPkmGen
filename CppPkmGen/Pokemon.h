@@ -20,5 +20,6 @@ public:
     unsigned getPersonality();
     bool checkShiny(unsigned short trainerID, unsigned short secretID, bool gen7);
     int getShinyVal(unsigned short trainerID, unsigned short secretID);
+    bool capture();
 };
 

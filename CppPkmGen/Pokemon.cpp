@@ -1,6 +1,7 @@
 #include "Pokemon.h"
 #include <cstdlib>
 #include "NumberGenerator.h"
+#include <algorithm>
 
 Pokemon::Pokemon(int id) {
 	this->id = id;
@@ -51,4 +52,18 @@ int Pokemon::getShinyVal(unsigned short trainerID, unsigned short secretID) {
 	unsigned short upper = (unsigned short)(personality >> 16);
 	unsigned short lower = (unsigned short)(personality & 0xFFFF);
 	return (unsigned short)(trainerID ^ secretID ^ upper ^ lower);
+}
+
+bool Pokemon::capture() {
+	int hpMax = 200;
+	int hpCurrent = 1;
+	int catchRate = 200;
+	float ballBonus = 1;
+	float statusBonus = 1;
+
+	double a = (((3 * hpMax - 2 * hpCurrent) * catchRate * ballBonus) / (3 * hpMax)) * statusBonus;
+
+	a = std::min(a, 255.0);
+
+	return (rand() % 255) < a;
 }

@@ -68,8 +68,10 @@ int catchOne() {
     while (!gotShiny) {
         catches++;
         if (a.checkShiny(trainer.getTrainerID(), trainer.getSecretID(), gen7)) {
-            gotShiny = true;
-            break;
+            if (a.capture()) {
+                gotShiny = true;
+                break;
+            }
         }
         //printf("%d\n", a.getShinyVal(trainer.getTrainerID(), trainer.getSecretID()));
         a.regen();
