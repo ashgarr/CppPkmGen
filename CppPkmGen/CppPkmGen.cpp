@@ -30,11 +30,11 @@ int main()
     while (!gen7InputOK)
     {
         std::cin >> s_gen7;
-        if (s_gen7 == "Y") {
+        if (s_gen7 == "Y" || s_gen7 == "y") {
             gen7 = true;
             gen7InputOK = true;
         }
-        else if (s_gen7 == "N") {
+        else if (s_gen7 == "N" || s_gen7 == "n") {
             gen7 = false;
             gen7InputOK = true;
         }
