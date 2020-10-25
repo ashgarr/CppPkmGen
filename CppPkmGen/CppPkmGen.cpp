@@ -12,6 +12,8 @@ Trainer trainer;
 int runtime = 0;
 bool gen7;
 int catchOne();
+int max = -1;
+int min = 1000000;
 
 int main()
 {
@@ -56,8 +58,8 @@ int main()
 
     int avg = sum / goes;
 
-    printf("That took an average of %d attempts, and a total of %d attempts!", avg, sum);
-    
+    printf("That took an average of %d attempts, and a total of %d attempts!\n", avg, sum);
+    printf("The fastest catch took %d attempts, and the slowest took %d attempts!\n", min, max);
 }
 
 int catchOne() {
@@ -76,7 +78,13 @@ int catchOne() {
     }
 
     runtime++;
-    printf("%d) You caught a X after %d tries!\n", runtime, catches);
+    if (catches > max) {
+        max = catches;
+    }
+    if (catches < min) {
+        min = catches;
+    }
+    printf("%d) You caught a shiny X after %d tries!\n", runtime, catches);
     return catches;
 }
 
