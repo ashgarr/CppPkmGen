@@ -14,6 +14,7 @@ bool gen7;
 int catchOne();
 int max = -1;
 int min = 1000000;
+int totalAttempts = 1000;
 
 int main()
 {
@@ -50,13 +51,12 @@ int main()
     trainer = Trainer(name);
 
     int sum = 0;
-    int goes = 1000;
 
-    for (int i = 0; i < goes; i++) {
+    for (int i = 0; i < totalAttempts; i++) {
         sum += catchOne();
     }
 
-    int avg = sum / goes;
+    int avg = sum / totalAttempts;
 
     printf("That took an average of %d attempts, and a total of %d attempts!\n", avg, sum);
     printf("The fastest catch took %d attempts, and the slowest took %d attempts!\n", min, max);
