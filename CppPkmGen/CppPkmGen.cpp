@@ -84,7 +84,8 @@ int catchOne() {
     if (catches < min) {
         min = catches;
     }
-    printf("%d) You caught a shiny X after %d tries!\n", runtime, catches);
+    //printf("%d) You caught a shiny X after %d tries!\n", runtime, catches);
+    std::cout << runtime << ") You caught a shiny X after " << catches << " tries!" << std::endl;
     return catches;
 }
 
