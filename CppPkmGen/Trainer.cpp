@@ -8,7 +8,7 @@ Trainer::Trainer(const char* name) {
 }
 
 Trainer::Trainer() {
-	const char* test = "o";
+	name = "ASH";
 	trainerID = u16Gen();
 	secretID = u16Gen();
 }
