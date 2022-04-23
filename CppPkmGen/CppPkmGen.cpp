@@ -6,6 +6,7 @@
 #include <ctime>
 #include "Trainer.h"
 #include "Pokemon.h"
+#include "Tackle.h"
 #include "NumberGenerator.h"
 
 Trainer trainer;
@@ -19,6 +20,9 @@ int totalAttempts = 1000;
 int main()
 {
     srand(time(0));
+
+    Tackle tac = Tackle();
+    tac.damage();
 
     // NAME HARVEST
     std::string s_name;
