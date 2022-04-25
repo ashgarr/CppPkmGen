@@ -6,7 +6,7 @@
 #include <ctime>
 #include "Trainer.h"
 #include "Pokemon.h"
-#include "Tackle.h"
+#include "Moves/AllMoves.h"
 #include "NumberGenerator.h"
 
 Trainer trainer;
@@ -23,6 +23,8 @@ int main()
 
     Tackle tac = Tackle();
     tac.damage();
+    WaterGun wg = WaterGun();
+    wg.damage();
 
     // NAME HARVEST
     std::string s_name;

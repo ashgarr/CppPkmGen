@@ -4,6 +4,7 @@
 Tackle::Tackle() {
 	power = 40;
 	accuracy = 100;
+    type = "normal";
 }
 
 void Tackle::damage() {

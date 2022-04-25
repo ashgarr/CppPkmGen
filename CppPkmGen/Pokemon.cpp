@@ -4,6 +4,8 @@
 
 Pokemon::Pokemon(int id) {
 	this->id = id;
+    this->level = 50;
+    this->type = "normal";
 	genIVs();
 	this->personality = personalityGen();
 }
@@ -15,6 +17,18 @@ void Pokemon::regen() {
 
 int Pokemon::getHP() {
 	return hpIV;
+}
+
+int Pokemon::getLevel() {
+    return level;
+}
+
+int Pokemon::getAtk() {
+    return atIV;
+}
+
+int Pokemon::getDef() {
+    return deIV;
 }
 
 unsigned Pokemon::getPersonality() {
