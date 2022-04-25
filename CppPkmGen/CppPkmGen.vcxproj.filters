@@ -27,10 +27,10 @@
     <ClCompile Include="NumberGenerator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Move.cpp">
+    <ClCompile Include="Moves\Tackle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Tackle.cpp">
+    <ClCompile Include="Moves\WaterGun.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -44,10 +44,16 @@
     <ClInclude Include="NumberGenerator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Move.h">
+    <ClInclude Include="Moves\Move.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Tackle.h">
+    <ClInclude Include="Moves\Tackle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Moves\AllMoves.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Moves\WaterGun.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

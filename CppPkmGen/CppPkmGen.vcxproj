@@ -152,17 +152,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CppPkmGen.cpp" />
-    <ClCompile Include="Move.cpp" />
+    <ClCompile Include="Moves\WaterGun.cpp" />
     <ClCompile Include="NumberGenerator.cpp" />
     <ClCompile Include="Pokemon.cpp" />
-    <ClCompile Include="Tackle.cpp" />
+    <ClCompile Include="Moves\Tackle.cpp" />
     <ClCompile Include="Trainer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Move.h" />
+    <ClInclude Include="Moves\Move.h" />
+    <ClInclude Include="Moves\AllMoves.h" />
+    <ClInclude Include="Moves\WaterGun.h" />
     <ClInclude Include="NumberGenerator.h" />
     <ClInclude Include="Pokemon.h" />
-    <ClInclude Include="Tackle.h" />
+    <ClInclude Include="Moves\Tackle.h" />
     <ClInclude Include="Trainer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
