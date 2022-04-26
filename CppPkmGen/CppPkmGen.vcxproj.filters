@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Moves">
+      <UniqueIdentifier>{6ae911d4-3f06-4aeb-bc20-b421ee85544b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Moves">
+      <UniqueIdentifier>{10b973a7-9b30-471c-8f85-a87a93467e52}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppPkmGen.cpp">
@@ -27,11 +33,11 @@
     <ClCompile Include="NumberGenerator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Moves\Tackle.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Moves\WaterGun.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Moves</Filter>
+    </ClCompile>
+    <ClCompile Include="Moves\Tackle.cpp">
+      <Filter>Source Files\Moves</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -44,17 +50,17 @@
     <ClInclude Include="NumberGenerator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Moves\AllMoves.h">
+      <Filter>Header Files\Moves</Filter>
+    </ClInclude>
     <ClInclude Include="Moves\Move.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Moves</Filter>
     </ClInclude>
     <ClInclude Include="Moves\Tackle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Moves\AllMoves.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Moves</Filter>
     </ClInclude>
     <ClInclude Include="Moves\WaterGun.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Moves</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
